@@ -3,3 +3,6 @@ node_modules/
 
 # Build
 dist/
+
+# Test snapshots
+src/client/__snapshots__
