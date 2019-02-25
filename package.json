@@ -1,0 +1,29 @@
+{
+  "name": "react-riotapi",
+  "version": "1.0.0",
+  "description": "Simple react app utilizing react, redux and sagas with some additional sugar on top",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-server && npm run build-client",
+    "build-server": "babel src/server --out-dir ./dist",
+    "build-client": "babel src/client --copy-files --out-dir ./dist/public",
+    "start": "node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuckyWasTaken/react-riotapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuckyWasTaken/react-riotapi/issues"
+  },
+  "homepage": "https://github.com/LuckyWasTaken/react-riotapi#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
