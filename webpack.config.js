@@ -1,8 +1,10 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const env = process.env.NODE_ENV;
 
 
 module.exports = {
+    mode: env || 'development',
     entry: {
         'bundle': './src/client/index.js'
     },

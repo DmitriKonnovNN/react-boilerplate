@@ -1,7 +1,9 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const env = process.env.NODE_ENV;
 
 module.exports = {
+    mode: env || 'development',
     entry: {
         'server': './src/server/index.js',
     },
