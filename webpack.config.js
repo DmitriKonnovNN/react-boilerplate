@@ -14,7 +14,7 @@ const moduleObj = {
 
 const client = {
     entry: {
-        'client': './src/client/index.js'
+        'bundle': './src/client/index.js'
     },
     target: 'web',
     output: {
