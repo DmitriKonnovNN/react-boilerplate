@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const moduleObj = {
-    loaders: [
+    rules: [
         {
             test: /\.js$/,
             exclude: /node_modules/,
@@ -26,7 +26,15 @@ const client = {
         new HtmlWebPackPlugin({
           template: 'src/client/index.html'
         })
-      ]
+      ],
+      devServer: {
+        contentBase: path.join(__dirname, 'dist/public'),
+        watchContentBase: true, 
+        overlay: { 
+          warnings: false, 
+          errors: true, 
+        },
+      },
 };
 
 const server = {
