@@ -1,18 +1,8 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-const moduleObj = {
-    rules: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loaders: ["babel-loader"],
-        }
-    ],
-};
 
-const client = {
+module.exports = {
     entry: {
         'bundle': './src/client/index.js'
     },
@@ -21,7 +11,15 @@ const client = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist/public')
     },
-    module: moduleObj,
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loaders: [ "babel-loader"],
+            }
+        ],
+    },
     plugins: [
         new HtmlWebPackPlugin({
           template: 'src/client/index.html'
@@ -36,18 +34,3 @@ const client = {
         },
       },
 };
-
-const server = {
-    entry: {
-        'server': './src/server/index.js',
-    },
-    target: 'node',
-    output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist')
-    },
-    module: moduleObj,
-    externals: [nodeExternals()]
-};
-
-module.exports = [client, server];

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build-server": "webpack --config server.webpack.config.js",
     "WDS": "webpack-dev-server --inline --hot",
     "build-babel": "npm run build-babel-server && npm run build-babel-client",
     "build-babel-server": "babel src/server --out-dir ./dist",
@@ -36,6 +37,7 @@
     "babel-loader": "^8.0.5",
     "html-webpack-plugin": "^3.2.0",
     "nodemon": "^1.18.10",
+    "react-hot-loader": "^4.7.1",
     "webpack-cli": "^3.2.3",
     "webpack-node-externals": "^1.7.2"
   }
