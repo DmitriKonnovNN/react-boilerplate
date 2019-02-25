@@ -1,2 +1,2 @@
-# react-riotapi
-Simple react app utilizing react, redux and sagas with some additional sugar on top
+# react-boilerplate
+React boilerplate with preinstalled webpack-dev-server, jest+enzyme, styled components and redux + thunk
