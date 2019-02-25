@@ -5,4 +5,4 @@ node_modules/
 dist/
 
 # Test snapshots
-src/client/__snapshots__
+src/client/tests/__snapshots__
